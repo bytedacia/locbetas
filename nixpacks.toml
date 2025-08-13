@@ -1,0 +1,18 @@
+[phases.setup]
+nixPkgs = ["nodejs_20", "npm"]
+
+[phases.install]
+cmds = [
+  "npm install",
+  "cd loc8abite-loc8abite-nicko/loc8abite-backend && npm install",
+  "cd ../loc8abite-frontend && npm install"
+]
+
+[phases.build]
+cmds = [
+  "cd loc8abite-loc8abite-nicko/loc8abite-frontend && npm run build",
+  "cd ../loc8abite-backend && npm run build"
+]
+
+[start]
+cmd = "cd loc8abite-loc8abite-nicko/loc8abite-backend && npm start"
