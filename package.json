@@ -1,0 +1,23 @@
+{
+  "name": "loc8abite",
+  "version": "1.0.0",
+  "description": "Gioco educativo per indovinare cibi e luoghi",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd loc8abite-loc8abite-nicko/loc8abite-backend && npm install && cd ../loc8abite-frontend && npm install",
+    "build": "cd loc8abite-loc8abite-nicko/loc8abite-frontend && npm run build && cd ../loc8abite-backend && npm run build",
+    "start": "cd loc8abite-loc8abite-nicko/loc8abite-backend && npm start",
+    "dev": "concurrently \"cd loc8abite-loc8abite-nicko/loc8abite-backend && npm run dev\" \"cd loc8abite-loc8abite-nicko/loc8abite-frontend && npm run dev\"",
+    "postinstall": "npm run install-all"
+  },
+  "keywords": ["game", "geography", "food", "education"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
